@@ -12,6 +12,7 @@
 		D478F79D2789CAA5006CD55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D478F79C2789CAA5006CD55B /* Assets.xcassets */; };
 		D478F7A02789CAA5006CD55B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D478F79F2789CAA5006CD55B /* Preview Assets.xcassets */; };
 		D478F7A72789D26C006CD55B /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D478F7A62789D26C006CD55B /* SoundPlayer.swift */; };
+		D478F7A9278AA978006CD55B /* ButtonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D478F7A8278AA978006CD55B /* ButtonImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D478F79C2789CAA5006CD55B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D478F79F2789CAA5006CD55B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D478F7A62789D26C006CD55B /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		D478F7A8278AA978006CD55B /* ButtonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				D478F7982789CAA4006CD55B /* MyMusicApp.swift */,
 				D478F79A2789CAA4006CD55B /* ContentView.swift */,
+				D478F7A8278AA978006CD55B /* ButtonImageView.swift */,
 				D478F7A62789D26C006CD55B /* SoundPlayer.swift */,
 				D478F79C2789CAA5006CD55B /* Assets.xcassets */,
 				D478F79E2789CAA5006CD55B /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				D478F79B2789CAA4006CD55B /* ContentView.swift in Sources */,
 				D478F7A72789D26C006CD55B /* SoundPlayer.swift in Sources */,
+				D478F7A9278AA978006CD55B /* ButtonImageView.swift in Sources */,
 				D478F7992789CAA4006CD55B /* MyMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
