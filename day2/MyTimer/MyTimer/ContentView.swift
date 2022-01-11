@@ -14,6 +14,9 @@ struct ContentView: View {
     @State var count = 0
     //永続化する秒数設定（初期値は0）
     @AppStorage("timer_value") var timerValue = 10
+    //アラート表示有無
+    @State var showAlert = false
+
     var body: some View {
         NavigationView {
             //奥から手前方向にレイアウト
@@ -78,7 +81,14 @@ struct ContentView: View {
                 //テキストを表示
                 Text("秒数設定")
             })
-            
+            //状態変数showAlertがtrueになったときに実行される
+            .alert(isPresented: $showAlert) {
+                //アラートを表示するためのレイアウトを記述する
+                //アラートを表示する
+                Alert(title: Text("終了"),
+                    message: Text("タイマー終了時間です"),
+                      dismissButton: .default(Text("OK")))
+            }
         }
     }
     
@@ -91,6 +101,8 @@ struct ContentView: View {
         if timerValue - count <= 0 {
             //タイマー停止
             timerHandler?.invalidate()
+            //アラートを表示する
+            showAlert = true
         }
     }
     
