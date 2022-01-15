@@ -59,26 +59,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
             //sheetを閉じる
             parent.isShowSheet = false
         }
-        
-//        //Coordinatorを生成、SwiftUIによって自動的に呼び出し
-//        func makeCoordinator() -> Coordinator {
-//            //Coordinatorクラスのインスタンスを生成
-//            Coordinator(self.parent)
-//        }
-//
-//        //Viewを生成するときに実行
-//        func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIImagePickerController {
-//
-//        }
-//        // Viewが更新されたときに実行
-//        func updateUIViewController(
-//            _ uiViewController: UIImagePickerController,
-//            context:UIViewControllerRepresentableContext<ImagePickerView>)
-//        {
-//            // 処理なし
-//        }
     }
-    
 }
 
 
