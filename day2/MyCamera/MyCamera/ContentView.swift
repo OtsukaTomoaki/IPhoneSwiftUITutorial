@@ -14,6 +14,10 @@ struct ContentView: View {
     @State var isShowSheet = false
     //シェア画面のsheet
     @State var isShowActivity = false
+    //フォトライブラリかカメラか保持する状態変数
+    @State var isPhotolibrary = false
+    //ActionSheetのsheet
+    @State var isShowAction = false
 
     var body: some View {
         VStack {
@@ -30,14 +34,7 @@ struct ContentView: View {
             Spacer()
             //カメラを起動するボタン
             Button(action: {
-                //カメラが利用可能かチェック
-                if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                    print("カメラは利用できます")
-                    isShowSheet = true
-                    
-                } else {
-                    print("カメラは利用できません")
-                }
+                isShowAction = true
             }) {
                 //テキストを表示
                 Text("カメラを起動する")
@@ -51,10 +48,43 @@ struct ContentView: View {
             //sheetを表示
             //.isPresentedで指定した状態変数がtrueのとき実行
             .sheet(isPresented: $isShowSheet) {
-                //UIImagePickerController（写真撮影）をsheetに表示
-                ImagePickerView(
-                    isShowSheet: $isShowSheet,
-                    captureImage: $captureImage)
+                //フォトライブラリが選択された
+                if isPhotolibrary {
+                    //PHPickerViewController(フォトライブラリ)を表示
+                    PHPickerView(
+                        isShowSheet: $isShowSheet,
+                        captureImage: $captureImage
+                    )
+                } else {
+                    //UIImagePickerController（写真撮影）をsheetに表示
+                    ImagePickerView(
+                        isShowSheet: $isShowSheet,
+                        captureImage: $captureImage)
+                }
+            }
+            //状態変数:$isShowActionに変化があったら実行
+            .actionSheet(isPresented: $isShowAction) {
+                //ActionSheetを表示する
+                ActionSheet(title: Text("確認"),
+                            message: Text("選択してください"),
+                            buttons: [
+                                .default(Text("カメラ"), action: {
+                                    //カメラを選択
+                                    isPhotolibrary = false
+                                    //カメラが利用可能かチェック
+                                    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                                        print("カメラは利用できます")
+                                        isShowSheet = true
+                                    } else {
+                                        print("カメラは利用できません")
+                                    }
+                                }),
+                                .default(Text("フォトライブラリー"), action: {
+                                    //カメラを選択
+                                    isPhotolibrary = true
+                                    isShowSheet = true
+                                }),
+                            .cancel(),])
             }
             
             //「SNSに投稿する」ボタン

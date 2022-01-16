@@ -13,6 +13,7 @@
 		D42E0CDB278DC4F400728B91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42E0CDA278DC4F400728B91 /* Preview Assets.xcassets */; };
 		D42E0CE2278DC55100728B91 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E0CE1278DC55100728B91 /* ImagePickerView.swift */; };
 		D42E0CE4279309B300728B91 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E0CE3279309B300728B91 /* ActivityView.swift */; };
+		D42E0CE62793149000728B91 /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E0CE52793149000728B91 /* PHPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D42E0CDA278DC4F400728B91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D42E0CE1278DC55100728B91 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		D42E0CE3279309B300728B91 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		D42E0CE52793149000728B91 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				D42E0CD3278DC4F300728B91 /* MyCameraApp.swift */,
 				D42E0CE3279309B300728B91 /* ActivityView.swift */,
 				D42E0CD5278DC4F300728B91 /* ContentView.swift */,
+				D42E0CE52793149000728B91 /* PHPickerView.swift */,
 				D42E0CD7278DC4F400728B91 /* Assets.xcassets */,
 				D42E0CE1278DC55100728B91 /* ImagePickerView.swift */,
 				D42E0CD9278DC4F400728B91 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42E0CE62793149000728B91 /* PHPickerView.swift in Sources */,
 				D42E0CD6278DC4F300728B91 /* ContentView.swift in Sources */,
 				D42E0CE4279309B300728B91 /* ActivityView.swift in Sources */,
 				D42E0CE2278DC55100728B91 /* ImagePickerView.swift in Sources */,
