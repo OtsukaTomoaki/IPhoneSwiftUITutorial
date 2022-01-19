@@ -15,6 +15,7 @@
 		D42E0CE4279309B300728B91 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E0CE3279309B300728B91 /* ActivityView.swift */; };
 		D42E0CE62793149000728B91 /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E0CE52793149000728B91 /* PHPickerView.swift */; };
 		D42E0CE82794618100728B91 /* EffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E0CE72794618100728B91 /* EffectView.swift */; };
+		D4C9EA9F279846800015A3B2 /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9EA9E279846800015A3B2 /* UIImageExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D42E0CE3279309B300728B91 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		D42E0CE52793149000728B91 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		D42E0CE72794618100728B91 /* EffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectView.swift; sourceTree = "<group>"; };
+		D4C9EA9E279846800015A3B2 /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				D42E0CD3278DC4F300728B91 /* MyCameraApp.swift */,
 				D42E0CE3279309B300728B91 /* ActivityView.swift */,
 				D42E0CD5278DC4F300728B91 /* ContentView.swift */,
+				D4C9EA9E279846800015A3B2 /* UIImageExtention.swift */,
 				D42E0CE72794618100728B91 /* EffectView.swift */,
 				D42E0CE52793149000728B91 /* PHPickerView.swift */,
 				D42E0CD7278DC4F400728B91 /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				D42E0CE82794618100728B91 /* EffectView.swift in Sources */,
 				D42E0CE2278DC55100728B91 /* ImagePickerView.swift in Sources */,
 				D42E0CD4278DC4F300728B91 /* MyCameraApp.swift in Sources */,
+				D4C9EA9F279846800015A3B2 /* UIImageExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

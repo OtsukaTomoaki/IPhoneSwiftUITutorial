@@ -97,7 +97,7 @@ struct EffectView: View {
             }
             .sheet(isPresented: $isShowActivity) {
                 //UIActivityViewControllerを表示する
-                ActivityView(shareItems: [showImage!])
+                ActivityView(shareItems: [showImage!.resize()!])
             }
             .padding()
             
