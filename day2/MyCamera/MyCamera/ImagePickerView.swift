@@ -50,7 +50,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
                 parent.captureImage = originalImage
             }
             //sheetを閉じる
-            parent.isShowSheet = false
+            parent.isShowSheet = true
         }
         
         //キャンセルボタンを選択されたときに呼ばれる
