@@ -21,6 +21,7 @@
 		D4C9EAB02798532E0015A3B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C9EAB32798532E0015A3B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4C9EABA27985B700015A3B2 /* OkashiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkashiData.swift; sourceTree = "<group>"; };
+		D4C9EABC279BEE7C0015A3B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		D4C9EAAB2798532D0015A3B2 /* MyOkashi */ = {
 			isa = PBXGroup;
 			children = (
+				D4C9EABC279BEE7C0015A3B2 /* Info.plist */,
 				D4C9EAAC2798532D0015A3B2 /* MyOkashiApp.swift */,
 				D4C9EAAE2798532D0015A3B2 /* ContentView.swift */,
 				D4C9EABA27985B700015A3B2 /* OkashiData.swift */,
@@ -276,6 +278,7 @@
 				DEVELOPMENT_TEAM = 8H826KDW3U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyOkashi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +308,7 @@
 				DEVELOPMENT_TEAM = 8H826KDW3U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyOkashi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
