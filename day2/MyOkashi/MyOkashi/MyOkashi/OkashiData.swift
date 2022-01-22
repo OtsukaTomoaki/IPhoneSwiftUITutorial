@@ -6,6 +6,15 @@
 //
 
 import Foundation
+import UIKit
+
+//Identifiableプロトコルを利用して、お菓子の情報をまとめる構造体
+struct OkashiItem: Identifiable {
+    let id = UUID()
+    let name: String
+    let link: URL
+    let image: UIImage
+}
 
 //お菓子データ検索用クラス
 class OkashiData: ObservableObject {
@@ -23,6 +32,9 @@ class OkashiData: ObservableObject {
         //複数要素
         let item: [Item]?
     }
+    
+    //お菓子のリスト（Identifiableプロトコル）
+    @Published var okashiList: [OkashiItem] = []
     
     //web API検索用メソッド、第一引数：keyword 検索したいワード
     func searchOkashi(keyword: String) {
@@ -55,7 +67,26 @@ class OkashiData: ObservableObject {
                 //受け取ったJSONデータをパース（解析）して格納
                 let json = try decoder.decode(ResultJson.self, from: data!)
                 
-                print(json)
+                //お菓子の情報が取得できているか確認
+                if let items = json.item {
+                    //お菓子のリストを初期化
+                    self.okashiList.removeAll()
+                    //取得しているお菓子の数だけ処理
+                    for item in items {
+                        //お菓子の名称、掲載URL、画像URLをアンラップ
+                        if let name = item.name,
+                           let link = item.url,
+                           let imageUrl = item.image,
+                           let imageData = try? Data(contentsOf: imageUrl),
+                           let image = UIImage(data: imageData)?.withRenderingMode(.alwaysOriginal) {
+                            //1つのお菓子を構造体でまとめて管理
+                            let okashi = OkashiItem(name: name, link: link, image: image)
+                            //お菓子配列へ追加
+                            self.okashiList.append(okashi)
+                        }
+                    }
+                    print(self.okashiList)
+                }
             } catch {
                 //エラー処理
                 print("エラーが出ました")

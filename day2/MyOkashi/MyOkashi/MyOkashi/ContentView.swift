@@ -21,6 +21,22 @@ struct ContentView: View {
                 //入力完了直後に検索する
                 okashiDataList.searchOkashi(keyword: inputText)
             })
+            .padding()
+            
+            //リストを表示する
+            List(okashiDataList.okashiList) { okashi in
+                //okashiに要素を取り出してListを生成する
+                //水平にレイアウト
+                HStack {
+                    //画像を表示する
+                    Image(uiImage: okashi.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 40)
+                    //テキストを表示する
+                    Text(okashi.name)
+                }
+            }
         }
     }
 }
